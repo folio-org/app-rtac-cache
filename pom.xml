@@ -7,7 +7,7 @@
   <artifactId>app-rtac-cache</artifactId>
   <groupId>org.folio</groupId>
   <description>Application Descriptor Repository for the FOLIO RTAC Cache application</description>
-  <version>1.0.0</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
     <project.name>app-rtac-cache</project.name>
