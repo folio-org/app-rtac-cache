@@ -5,8 +5,8 @@
   "platform": "complete",
   "dependencies": [
     {
-      "name": "app-rtac",
-      "version": "^1.0.0"
+      "name": "app-platform-complete",
+      "version": "^2.1.0"
     }
   ],
   "modules": [
