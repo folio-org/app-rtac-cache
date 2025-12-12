@@ -12,7 +12,7 @@
   "modules": [
     {
       "name": "mod-rtac-cache",
-      "version": "latest"
+      "version": "1.0.0"
     }
   ]
 }
