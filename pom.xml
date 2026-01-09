@@ -12,9 +12,8 @@
   <properties>
     <project.name>app-rtac-cache</project.name>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <folio-application-generator.version>1.2.0-SNAPSHOT</folio-application-generator.version>
+    <folio-application-generator.version>1.4.1-SNAPSHOT</folio-application-generator.version>
     <templatePath>${basedir}/${project.name}.template.json</templatePath>
-    <maven-release-plugin.version>3.1.1</maven-release-plugin.version>
   </properties>
 
   <build>
@@ -38,17 +37,6 @@
               <url>https://folio-registry.dev.folio.org</url>
             </registry>
           </moduleRegistries>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>${maven-release-plugin.version}</version>
-        <configuration>
-          <preparationGoals>clean verify</preparationGoals>
-          <tagNameFormat>v@{project.version}</tagNameFormat>
-          <pushChanges>false</pushChanges>
-          <localCheckout>true</localCheckout>
         </configuration>
       </plugin>
     </plugins>
