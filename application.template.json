@@ -1,0 +1,20 @@
+{
+  "name": "${project.name}",
+  "version": "${project.version}",
+  "description": "${project.description}",
+  "platform": "complete",
+  "dependencies": [
+    {
+      "name": "app-rtac",
+      "version": "^1.0.0",
+      "preRelease": "false"
+    }
+  ],
+  "modules": [
+    {
+      "name": "mod-rtac-cache",
+      "version": "latest",
+      "preRelease": "false"
+    }
+  ]
+}
