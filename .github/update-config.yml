@@ -1,0 +1,15 @@
+update_config:
+  enabled: true
+  update_branch_format: version-update/{0}
+  labels:
+    - version-update
+  pr_reviewers:
+    - folio-org/kitfox
+    - folio-org/dreamliner
+
+branches:
+  - snapshot:
+      enabled: true
+      need_pr: false
+      pre_release: "only"
+      descriptor_build_offset: "100200000000000"
