@@ -6,14 +6,14 @@
   "dependencies": [
     {
       "name": "app-rtac",
-      "version": "^VERSION_^1.0.0",
+      "version": "~1.1.0",
       "preRelease": "false"
     }
   ],
   "modules": [
     {
       "name": "mod-rtac-cache",
-      "version": "^VERSION_latest",
+      "version": "~1.1.0",
       "preRelease": "false"
     }
   ]
