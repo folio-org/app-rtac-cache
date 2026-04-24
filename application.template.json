@@ -6,20 +6,15 @@
   "dependencies": [
     {
       "name": "app-rtac",
-      "version": "^1.1.0-SNAPSHOT",
-      "preRelease": "only"
-    },
-    {
-      "name": "app-inventory",
-      "version": "^1.0.0-SNAPSHOT",
-      "preRelease": "only"
+      "version": "^VERSION_^1.0.0",
+      "preRelease": "false"
     }
   ],
   "modules": [
     {
       "name": "mod-rtac-cache",
-      "version": "latest",
-      "preRelease": "only"
+      "version": "^VERSION_latest",
+      "preRelease": "false"
     }
   ]
 }
