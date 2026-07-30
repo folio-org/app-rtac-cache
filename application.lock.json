@@ -1,12 +1,12 @@
 {
-  "id" : "app-rtac-cache-1.1.0-SNAPSHOT.100200000007051",
+  "id" : "app-rtac-cache-1.1.0-SNAPSHOT.100200000007052",
   "name" : "app-rtac-cache",
-  "version" : "1.1.0-SNAPSHOT.100200000007051",
+  "version" : "1.1.0-SNAPSHOT.100200000007052",
   "description" : "Application Descriptor Repository for the FOLIO RTAC application",
   "modules" : [ {
-    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.5e1a359",
+    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.2121",
     "name" : "mod-rtac-cache",
-    "version" : "1.2.0-SNAPSHOT.5e1a359"
+    "version" : "1.2.0-SNAPSHOT.2121"
   } ],
   "uiModules" : [ ],
   "dependencies" : [ {
@@ -19,8 +19,51 @@
     "preRelease" : "only"
   } ],
   "moduleDescriptors" : [ {
-    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.5e1a359",
+    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.2121",
     "name" : "Fetches real time availability information from FOLIO for instances, items and holdings.",
+    "requires" : [ {
+      "id" : "item-storage",
+      "version" : "11.2"
+    }, {
+      "id" : "holdings-storage",
+      "version" : "8.2"
+    }, {
+      "id" : "instance-storage",
+      "version" : "11.3"
+    }, {
+      "id" : "loan-types",
+      "version" : "2.4"
+    }, {
+      "id" : "material-types",
+      "version" : "2.2"
+    }, {
+      "id" : "location-units",
+      "version" : "2.1"
+    }, {
+      "id" : "locations",
+      "version" : "3.2"
+    }, {
+      "id" : "holdings-note-types",
+      "version" : "1.0"
+    }, {
+      "id" : "loan-storage",
+      "version" : "7.4"
+    }, {
+      "id" : "circulation",
+      "version" : "14.7"
+    }, {
+      "id" : "orders-storage.pieces",
+      "version" : "5.0"
+    }, {
+      "id" : "user-tenants",
+      "version" : "1.0"
+    }, {
+      "id" : "settings",
+      "version" : "1.2"
+    }, {
+      "id" : "bound-with-parts-storage",
+      "version" : "2.0"
+    } ],
     "provides" : [ {
       "id" : "rtac-cache",
       "version" : "1.0",
@@ -71,49 +114,6 @@
         "methods" : [ "DELETE", "GET" ],
         "pathPattern" : "/_/tenant/{id}"
       } ]
-    } ],
-    "requires" : [ {
-      "id" : "item-storage",
-      "version" : "11.2"
-    }, {
-      "id" : "holdings-storage",
-      "version" : "8.2"
-    }, {
-      "id" : "instance-storage",
-      "version" : "11.3"
-    }, {
-      "id" : "loan-types",
-      "version" : "2.4"
-    }, {
-      "id" : "material-types",
-      "version" : "2.2"
-    }, {
-      "id" : "location-units",
-      "version" : "2.1"
-    }, {
-      "id" : "locations",
-      "version" : "3.2"
-    }, {
-      "id" : "holdings-note-types",
-      "version" : "1.0"
-    }, {
-      "id" : "loan-storage",
-      "version" : "7.4"
-    }, {
-      "id" : "circulation",
-      "version" : "14.7"
-    }, {
-      "id" : "orders-storage.pieces",
-      "version" : "5.0"
-    }, {
-      "id" : "user-tenants",
-      "version" : "1.0"
-    }, {
-      "id" : "settings",
-      "version" : "1.2"
-    }, {
-      "id" : "bound-with-parts-storage",
-      "version" : "2.0"
     } ],
     "optional" : [ {
       "id" : "consortia",
@@ -171,18 +171,8 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "mod-rtac-cache:1.2.0-SNAPSHOT.5e1a359",
-      "dockerPull" : false,
-      "dockerArgs" : {
-        "HostConfig" : {
-          "Memory" : 357913941,
-          "PortBindings" : {
-            "8081/tcp" : [ {
-              "HostPort" : "%p"
-            } ]
-          }
-        }
-      },
+      "dockerImage" : "folioci/mod-rtac-cache:1.2.0-SNAPSHOT.2121",
+      "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
         "value" : "-XX:MaxRAMPercentage=66.0"
@@ -267,7 +257,17 @@
       }, {
         "name" : "RTAC_CACHE_RETENTION_DAYS",
         "value" : "2"
-      } ]
+      } ],
+      "dockerArgs" : {
+        "HostConfig" : {
+          "Memory" : 357913941,
+          "PortBindings" : {
+            "8081/tcp" : [ {
+              "HostPort" : "%p"
+            } ]
+          }
+        }
+      }
     }
   } ],
   "uiModuleDescriptors" : [ ]
