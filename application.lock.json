@@ -1,12 +1,12 @@
 {
-  "id" : "app-rtac-cache-1.1.0-SNAPSHOT.100200000007731",
+  "id" : "app-rtac-cache-1.1.0-SNAPSHOT.100200000007946",
   "name" : "app-rtac-cache",
-  "version" : "1.1.0-SNAPSHOT.100200000007731",
+  "version" : "1.1.0-SNAPSHOT.100200000007946",
   "description" : "Application Descriptor Repository for the FOLIO RTAC application",
   "modules" : [ {
-    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.2189",
+    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.2199",
     "name" : "mod-rtac-cache",
-    "version" : "1.2.0-SNAPSHOT.2189"
+    "version" : "1.2.0-SNAPSHOT.2199"
   } ],
   "uiModules" : [ ],
   "dependencies" : [ {
@@ -19,7 +19,7 @@
     "preRelease" : "only"
   } ],
   "moduleDescriptors" : [ {
-    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.2189",
+    "id" : "mod-rtac-cache-1.2.0-SNAPSHOT.2199",
     "name" : "Fetches real time availability information from FOLIO for instances, items and holdings.",
     "requires" : [ {
       "id" : "item-storage",
@@ -312,7 +312,7 @@
       }
     },
     "launchDescriptor" : {
-      "dockerImage" : "folioci/mod-rtac-cache:1.2.0-SNAPSHOT.2189",
+      "dockerImage" : "folioci/mod-rtac-cache:1.2.0-SNAPSHOT.2199",
       "dockerPull" : true,
       "env" : [ {
         "name" : "JAVA_OPTIONS",
